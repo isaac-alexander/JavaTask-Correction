@@ -1,13 +1,37 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+void main(String[] args) {
+    // PERSON TASK 1
+    Person male = new Person("Dave", 27);
+    Person female = new Person("Uche", 27);
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }
+    male.printPerson();
+    female.printPerson();
+
+    // DOG TASK 2
+    // Creating two Dog objects using the constructor
+    Dog dog1 = new Dog("Sky", "Rottweiler");
+    Dog dog2 = new Dog("Kujo", "Bulldog");
+
+    // Updating attributes using setter methods
+    dog1.setName("Kiba");
+    dog1.setBreed("German Shepherd");
+
+    dog2.setName("Max");
+    dog2.setBreed("Bloodhound");
+
+    // Printing updated values
+    System.out.println("Dog1 - Name: " + dog1.getName() + ", Breed: " + dog1.getBreed());
+    System.out.println("Dog2 - Name: " + dog2.getName() + ", Breed: " + dog2.getBreed());
+
+    // RECTANGLE TASK 3
+    // create instance of rectangle
+    Rectangle rectangle = new Rectangle(5, 5);
+    rectangle.rectangleDetails();
+
+    // CIRCLE TASK 4
+    Circle circle = new Circle(5);
+    circle.setRadius(10);
+
+    System.out.println("Circle - Radius: " + circle.getRadius());
+    System.out.println("The area of the circle is: " + circle.getArea());
+    System.out.println("The circumference of the circle is: " + circle.getCircumference());
 }
