@@ -34,4 +34,65 @@ void main(String[] args) {
     System.out.println("Circle - Radius: " + circle.getRadius());
     System.out.println("The area of the circle is: " + circle.getArea());
     System.out.println("The circumference of the circle is: " + circle.getCircumference());
+
+    // BOOK
+    Book book1 = new Book("Old Life", "Some Body", 90041);
+    Book book2 = new Book("New Life", "Some Body", 90041);
+    Book book3 = new Book("Next Life", "Some Body", 90041);
+
+    boolean isBookAdded = book1.addBook(book1);
+    System.out.println("is book added = " + isBookAdded);
+    book1.addBook(book2);
+    book1.addBook(book3);
+
+    book1.printBooks();
+
+    System.out.println("===");
+    boolean isBookRemoved = book1.removeBook(book1);
+    System.out.println("is book removed = " + isBookRemoved);
+
+    isBookRemoved = book1.removeBook(book1);
+    System.out.println("is book removed = " + isBookRemoved);
+
+    book1.printBooks();
+
+    // EMPLOYEE
+    Employee employee = new Employee("Frank Martins", "doctor");
+    Employee employee2 = new Employee("John Jones", "engineer");
+    Employee employee3 = new Employee("Kate Martins", "nurse");
+    employee.employeeDetails();
+    employee2.employeeDetails();
+    employee3.employeeDetails();
+
+    System.out.println("====");
+    employee.calculateSalary();
+    employee2.calculateSalary();
+    employee3.calculateSalary();
+
+    employee.employeeDetails();
+    employee2.employeeDetails();
+    employee3.employeeDetails();
+
+    // BANK
+    Bank bank = new Bank();
+
+    Account account1 = new Account("stephen", "08021212121");
+    Account account2 = new Account("Alex", "09012121212");
+    bank.addAccount(account1);
+    bank.addAccount(account2);
+
+    bank.displayAccounts();
+
+    System.out.println("===");
+    bank.removeAccount(account1);
+    bank.removeAccount(account2);
+    bank.displayAccounts();
+    bank.depositMoney(account1, 2000);
+    bank.depositMoney(account2, 8000);
+    bank.displayAccounts();
+
+    System.out.println("===");
+    bank.withdrawMoney(account1, 600);
+    bank.withdrawMoney(account2, 800);
+    bank.displayAccounts();
 }
