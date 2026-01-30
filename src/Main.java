@@ -311,4 +311,11 @@ void main(String[] args) {
     savingsAccount.applyInterest();
     savingsAccount.displayBalance();
 
+    // VEHICLE TASK 21
+
+    Car car = new Car("Ford", "F-150", "2019", "350LTR");
+    car.displayVehicleDetails();
+
+    Truck truck1 = new Truck("Ford", "F-150", "2019", "1200KG");
+    truck1.displayVehicleDetails();
 }
