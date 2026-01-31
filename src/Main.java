@@ -313,9 +313,67 @@ void main(String[] args) {
 
     // VEHICLE TASK 21
 
-    Car car = new Car("Ford", "F-150", "2019", "350LTR");
+    Car car = new Car("Ford, ", "F-150,", "2019, ", "350LTR");
     car.displayVehicleDetails();
 
-    Truck truck1 = new Truck("Ford", "F-150", "2019", "1200KG");
+    Truck truck1 = new Truck("Ford, ", "F-150, ", "2019, ", "1200KG");
     truck1.displayVehicleDetails();
+
+    //CUSTOMER TASK 22
+
+    Customer customer1 = new Customer("Alex", "alex@mail.com");
+    customer1.addPurchase(3000);
+    customer1.addPurchase(1000);
+
+    System.out.println("Customer Total Spent: " + customer1.totalExpenditure());
+
+    LoyalCustomer customer2 = new LoyalCustomer("Isaac", "isaac@mail.com", 0.10);
+    customer2.addPurchase(4000);
+    customer2.addPurchase(1500);
+
+    System.out.println("Loyal Customer Total Spent: " + customer2.totalExpenditure());
+    System.out.println("After Discount: " + customer2.getDiscountedTotal());
+
+    //COURSE TASK 23
+
+    Course course = new Course("HTML", "Logan Fish", 2);
+    course.displayDetails();
+
+    System.out.println();
+
+    // Online courses
+    OnlineCourse onlineCourse1 = new OnlineCourse("CSS", "Mary Drinkwater", 4, "YouTube", 15);
+
+    OnlineCourse onlineCourse2 = new OnlineCourse("Bootstrap", "Mark Mediolas", 3, "FaceBook", 7);
+
+    // Display details
+    onlineCourse1.displayDetails();
+    System.out.println();
+
+    onlineCourse2.displayDetails();
+    System.out.println();
+
+    // Certificate check for first course
+    onlineCourse1.isEligibleForCertificate();
+    onlineCourse2.isEligibleForCertificate();
+
+    // ELECTRONIC PRODUCT TASK 24
+    ElectronicsProduct electronicsProduct = new ElectronicsProduct(1, "LG Blender", 19.99);
+
+    electronicsProduct.printProductDetails();
+
+    electronicsProduct.getDiscount();
+
+    electronicsProduct.calculateFinalPrice();
+
+    electronicsProduct.printProductDetails();
+
+    WashingMachine washingMachine = new WashingMachine(2, "Hisense Washing Machine", 299.99, 1);
+
+    washingMachine.printProductDetails();
+
+    washingMachine.extendWarranty();
+
+    washingMachine.printProductDetails();
+
 }

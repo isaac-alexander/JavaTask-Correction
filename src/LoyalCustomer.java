@@ -1,11 +1,14 @@
 public class LoyalCustomer extends Customer {
-    private int discount;
+    private double discount;
 
 
-    public LoyalCustomer(String name, String email, String purchaseHistory, int discount) {
-        super(name, email, purchaseHistory);
+    public LoyalCustomer(String name, String email, double discount) {
+        super(name, email);
         this.discount = discount;
     }
 
-//Continue
+    public double getDiscountedTotal() {
+        double total = totalExpenditure();
+        return total - (total * this.discount);
+    }
 }
