@@ -6,10 +6,9 @@ public class WashingMachine extends ElectronicsProduct {
         this.warranty = warranty;
     }
 
-    public int extendWarranty() {
+    public void extendWarranty() {
         int extendWarranty = 1;
         this.warranty += extendWarranty;
-        return this.warranty;
     }
 
 

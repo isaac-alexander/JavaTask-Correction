@@ -376,4 +376,30 @@ void main(String[] args) {
 
     washingMachine.printProductDetails();
 
+
+    //BUILDING TASK 25
+    ResidentialBuilding residential = new ResidentialBuilding("20 Eleyele", 3, 400, 12, 8000);
+
+    System.out.println("Residential Building:");
+    residential.displayDetails();
+
+    CommercialBuilding commercial = new CommercialBuilding("3 RingRoad", 12, 1000, 50, 1500);
+
+    System.out.println("====");
+
+    System.out.println("Commercial Building:");
+    commercial.displayDetails();
+
+    //EVENT TASK 26
+    Seminar seminar = new Seminar("Tech Seminar", "2026-02-01", "Lagos", 5);
+
+    seminar.displayDetails();
+    MusicalPerformance concert = new MusicalPerformance("Jazz Night", "2026-02-01", "Lagos");
+    concert.addPerformer("Dave");
+    concert.addPerformer("Giggs");
+
+    concert.displayDetails();
+
+    seminar.hasConflict(concert);
+
 }

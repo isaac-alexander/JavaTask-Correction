@@ -23,10 +23,9 @@ public class ElectronicsProduct {
         return price;
     }
 
-    public double getDiscount() {
+    public void getDiscount() {
         double discount = 0.2 * this.price;
         this.price -= discount;
-        return this.price;
     }
 
     public double calculateFinalPrice() {
