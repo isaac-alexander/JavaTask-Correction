@@ -402,4 +402,27 @@ void main(String[] args) {
 
     seminar.hasConflict(concert);
 
+    //CUSTOMER ORDER TASK 27
+    OnlineOrder order = new OnlineOrder(1001, "Alexander Isaac", "01-02-2026", "Lagos", 123456);
+
+    order.displayDetails();
+    // Update tracking status
+    order.updateTrackingStatus();
+    order.displayDetails();
+
+    // RESERVATION TASK 28
+    RailwayReservation railway = new RailwayReservation(306, 2, "Jake", LocalDate.now());
+    ResortReservation resort = new ResortReservation(9, 5, "Mark", LocalDate.now());
+    System.out.println(resort.checkReservationStatus());
+    System.out.println(railway.checkReservationStatus());
+
+    resort.modifyReservationDetails("Confirmed", LocalDate.now());
+    System.out.println(resort.checkReservationStatus());
+
+    resort.modifyReservationDetails(100, "Confirmed", LocalDate.now());
+    System.out.println(resort.checkReservationStatus());
+
+    railway.modifyReservationDetails("Cancelled", LocalDate.now(), 99);
+    System.out.println(railway.checkReservationStatus());
+
 }
